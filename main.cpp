@@ -18,16 +18,16 @@ private:
     int nr_absente;
 public:
     Elev(){
-        nume_elev="";
-        note_mate= nullptr;
-        note_romana= nullptr;
-        note_info= nullptr;
-        note_fizica= nullptr;
-        note1=0;
-        note2=0;
-        note3=0;
-        note4=0;
-        nr_absente=0;
+        this->nume_elev="";
+        this->note_mate= nullptr;
+        this->note_romana= nullptr;
+        this->note_info= nullptr;
+        this->note_fizica= nullptr;
+        this->note1=0;
+        this->note2=0;
+        this->note3=0;
+        this->note4=0;
+        this->nr_absente=0;
     }
     explicit Elev(string nume){
         nume_elev=std::move(nume);
@@ -594,7 +594,7 @@ int main() {
     elevi4[1] = e8;
     elevi4[2] = e9;
     elevi4[3] = e10;
-    Clasa C1("9A", P1, elevi1, 2), C2("10A", P3, elevi2, 1), C3("11A", P4, elevi3, 3), C4("12A", P2, elevi4, 4);
+    Clasa C1("9A", P1, elevi1, 2), C2("10A", P3, elevi2, 1), C3("11A", P4, elevi3, 3), C4("12A", P2, elevi4, 4  );
     Clasa clase[12];
     clase[0] = C1;
     clase[1] = C2;
