@@ -2,6 +2,7 @@
 #include <utility>
 #include <cmath>
 #include <string>
+//#include <vector>
 using namespace std;
 
 class Elev{
@@ -42,48 +43,48 @@ public:
         this->nr_absente=0;
     }
     Elev(string nume, const int* notemate,int n1, const int* noteromana, int n2, const int* notefizica,int n3, const int* noteinfo,int n4, int absente){
-       nume_elev=std::move(nume);
+       this->nume_elev=std::move(nume);
        if(notemate!=nullptr&&n1>0){
-           note1=n1;
-           note_mate=new int[note1];
-           for(int i=0;i<note1;i++)
-               note_mate[i]=notemate[i];
+           this->note1=n1;
+           this->note_mate=new int[this->note1];
+           for(int i=0;i<this->note1;i++)
+               this->note_mate[i]=notemate[i];
        }
        else{
-           note_mate= nullptr;
-           note1=0;
+           this->note_mate= nullptr;
+           this->note1=0;
        }
         if(noteromana!=nullptr&&n2>0){
-            note2=n2;
-            note_romana=new int[note2];
-            for(int i=0;i<note2;i++)
-                note_romana[i]=noteromana[i];
+            this->note2=n2;
+            this->note_romana=new int[this->note2];
+            for(int i=0;i<this->note2;i++)
+                this->note_romana[i]=noteromana[i];
         }
         else{
-            note_romana= nullptr;
-            note2=0;
+            this->note_romana= nullptr;
+            this->note2=0;
         }
         if(notefizica!=nullptr&&n3>0){
-            note3=n3;
-            note_fizica=new int[note3];
-            for(int i=0;i<note3;i++)
-                note_fizica[i]=notefizica[i];
+            this->note3=n3;
+            this->note_fizica=new int[this->note3];
+            for(int i=0;i<this->note3;i++)
+                this->note_fizica[i]=notefizica[i];
         }
         else{
-            note_fizica= nullptr;
-            note3=0;
+            this->note_fizica= nullptr;
+            this->note3=0;
         }
         if(noteinfo!=nullptr&&n4>0){
-            note4=n4;
-            note_info=new int[note4];
-            for(int i=0;i<note4;i++)
-                note_info[i]=noteinfo[i];
+            this->note4=n4;
+            this->note_info=new int[this->note4];
+            for(int i=0;i<this->note4;i++)
+                this->note_info[i]=noteinfo[i];
         }
         else{
-            note_info= nullptr;
-            note4=0;
+            this->note_info= nullptr;
+            this->note4=0;
         }
-        nr_absente=absente;
+        this->nr_absente=absente;
     }
     ~Elev(){///Merge sters si nullptr
        delete[]note_mate;
