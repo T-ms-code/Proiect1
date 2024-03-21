@@ -586,7 +586,7 @@ int main() {
     elevi3[0] = e4;
     elevi3[1] = e5;
     elevi3[2] = e6;
-    Elev elevi4[2], e7("Telu Mihai", v7, 5, v4, 2, v4, 2, v7, 5, 0), e8("Fugulin Victor-Gabriel", v7, 5, v7, 5, v3, 3,
+    Elev elevi4[4], e7("Telu Mihai", v7, 5, v4, 2, v4, 2, v7, 5, 0), e8("Fugulin Victor-Gabriel", v7, 5, v7, 5, v3, 3,
                                                                         v3, 3, 0), e9("Serban Alexandru", v7, 5, v7, 5,
                                                                                       v6, 4, v7, 5, 3), e10(
             "Ciuca Teodora", v6, 4, v7, 5, v6, 4, v2, 3, 1);
