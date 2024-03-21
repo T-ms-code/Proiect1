@@ -30,16 +30,16 @@ public:
         this->nr_absente=0;
     }
     explicit Elev(string nume){
-        nume_elev=std::move(nume);
-        note_mate= nullptr;
-        note_romana= nullptr;
-        note_info= nullptr;
-        note_fizica= nullptr;
-        note1=0;
-        note2=0;
-        note3=0;
-        note4=0;
-        nr_absente=0;
+        this->nume_elev=std::move(nume);
+        this->note_mate= nullptr;
+        this->note_romana= nullptr;
+        this->note_info= nullptr;
+        this->note_fizica= nullptr;
+        this->note1=0;
+        this->note2=0;
+        this->note3=0;
+        this->note4=0;
+        this->nr_absente=0;
     }
     Elev(string nume, const int* notemate,int n1, const int* noteromana, int n2, const int* notefizica,int n3, const int* noteinfo,int n4, int absente){
        nume_elev=std::move(nume);
@@ -92,20 +92,20 @@ public:
        delete[]note_fizica;
     }
     Elev(const Elev& e){
-        nume_elev=e.nume_elev;
-        nr_absente=e.nr_absente;
-        note1=e.note1;
-        note2=e.note2;
-        note3=e.note3;
-        note4=e.note4;
-        if(e.note_mate!=nullptr&&note1>0){
-            note_mate=new int[note1];
-            for(int i=0;i<note1;i++)
-                note_mate[i]=e.note_mate[i];
+        this->nume_elev=e.nume_elev;
+        this->nr_absente=e.nr_absente;
+        this->note1=e.note1;
+        this->note2=e.note2;
+        this->note3=e.note3;
+        this->note4=e.note4;
+        if(e.note_mate!=nullptr&&this->note1>0){
+            this->note_mate=new int[this->note1];
+            for(int i=0;i<this->note1;i++)
+                this->note_mate[i]=e.note_mate[i];
         }
         else{
-            note_mate= nullptr;
-            note1=0;
+            this->note_mate= nullptr;
+            this->note1=0;
         }
         if(e.note_romana!=nullptr&&note2>0){
             note_romana=new int[note2];
